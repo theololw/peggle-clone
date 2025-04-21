@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://dusavmr4veh3b"]
+
+[ext_resource type="Script" uid="uid://clpfdkfcgg5f2" path="res://scripts/level_frame.gd" id="1_hgmru"]
+[ext_resource type="Texture2D" uid="uid://oyfej8cooa1g" path="res://assets/ui.png" id="2_ahgut"]
+[ext_resource type="Texture2D" uid="uid://brwev0cxpnblw" path="res://assets/winScreen.png" id="3_ahgut"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rka8t"]
+size = Vector2(82, 1536)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5hph3"]
+size = Vector2(1136, 98)
+
+[node name="level_frame" type="Node"]
+script = ExtResource("1_hgmru")
+
+[node name="Ui" type="Sprite2D" parent="."]
+position = Vector2(400, 248)
+texture = ExtResource("2_ahgut")
+vframes = 2
+
+[node name="Ui2" type="Sprite2D" parent="."]
+position = Vector2(400, 433.5)
+scale = Vector2(1, 1.00909)
+texture = ExtResource("2_ahgut")
+vframes = 3
+frame = 2
+
+[node name="walls" type="StaticBody2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls"]
+position = Vector2(39, -168)
+shape = SubResource("RectangleShape2D_rka8t")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls"]
+position = Vector2(760, -168)
+shape = SubResource("RectangleShape2D_rka8t")
+
+[node name="death_pit" type="Area2D" parent="."]
+position = Vector2(416, 632)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death_pit"]
+position = Vector2(-24, 39)
+shape = SubResource("RectangleShape2D_5hph3")
+debug_color = Color(0.981387, 0, 0.371502, 0.42)
+
+[node name="WinScreen" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(416, 316)
+texture = ExtResource("3_ahgut")
+
+[node name="Button" type="Button" parent="WinScreen"]
+offset_left = -176.0
+offset_top = 184.0
+offset_right = 176.0
+offset_bottom = 212.0
+text = "NEXT LEVEL"
+
+[connection signal="body_entered" from="death_pit" to="." method="_on_death_pit_body_entered"]
+[connection signal="pressed" from="WinScreen/Button" to="." method="_on_button_pressed"]

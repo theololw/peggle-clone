@@ -10,6 +10,7 @@ func _ready() -> void:
 		$ghost_Ball.hide()
 		$CPUParticles2D.show()
 		$ghost_ball_timeout.start()
+		$Particle_timout.start()
 	else:
 		$Ball.show()
 		$ghost_Ball.hide()
@@ -24,3 +25,7 @@ func _on_death_pit_body_entered(body: Node2D) -> void:
 
 func _on_ghost_ball_timeout_timeout() -> void:
 	queue_free()
+
+
+func _on_particle_timout_timeout() -> void:
+	$CPUParticles2D.emitting = false

@@ -8,11 +8,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Ball"):
 		hit = true
 		if orange:
-			$PegOrangeHit.show()
+			$Orange_Brick_Hit.show()
 		else:
-			$blue_peg_hit.show()
+			$Blue_Brick_Hit.show()
 
 func become_orange():
-	$PegOrange.show()
-	$blue_peg.hide()
-	Global.total_oranges += 1
+	$Orange_Brick.show()
+	$Blue_Brick.hide()

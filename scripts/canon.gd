@@ -25,6 +25,17 @@ func spawn_ghost_ball():
 
 
 func _process(delta: float) -> void:
+	# assign oran
+	
+	if Global.orange_assigned_left > 0:
+		for peg in get_tree().get_nodes_in_group("peg"):
+			var random_number = randi_range(0,100)
+			if random_number == 0:
+				peg.orange = true
+				peg.become_orange()
+				Global.orange_assigned_left -= 1
+	
+	
 	
 	# shooter look at where the mouse is
 	$shooter.look_at(get_global_mouse_position())

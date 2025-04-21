@@ -1,0 +1,336 @@
+[gd_scene load_steps=7 format=3 uid="uid://ch4xsde8ki6f5"]
+
+[ext_resource type="Texture2D" uid="uid://cpfnv6rx1xf7e" path="res://assets/level2.png" id="1_1y8me"]
+[ext_resource type="PackedScene" uid="uid://dusavmr4veh3b" path="res://scenes/level_frame.tscn" id="1_nmjpi"]
+[ext_resource type="PackedScene" uid="uid://c640ell31g2om" path="res://scenes/canon.tscn" id="2_xdadj"]
+[ext_resource type="Texture2D" uid="uid://cljadv05bnb47" path="res://assets/PC Computer - Peggle Deluxe - Bjorn Unicorns Stages.png" id="4_n7ypv"]
+[ext_resource type="PackedScene" uid="uid://m3f07je2igwj" path="res://scenes/peg.tscn" id="5_n7ypv"]
+[ext_resource type="PackedScene" uid="uid://dmy76niufgboj" path="res://scenes/brick.tscn" id="6_0s5r2"]
+
+[node name="level_2" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(400, 324)
+scale = Vector2(1.00459, 1.00546)
+texture = ExtResource("4_n7ypv")
+hframes = 2
+vframes = 3
+frame = 1
+
+[node name="Level2" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.517647)
+position = Vector2(400, 288)
+texture = ExtResource("1_1y8me")
+
+[node name="level_frame" parent="." instance=ExtResource("1_nmjpi")]
+
+[node name="canon" parent="." instance=ExtResource("2_xdadj")]
+position = Vector2(400, 64)
+
+[node name="pegs" type="Node2D" parent="."]
+
+[node name="peg" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(150, 119)
+
+[node name="peg2" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(159, 155)
+
+[node name="peg3" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(169, 195)
+
+[node name="peg4" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(111, 189)
+
+[node name="peg5" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(112, 125)
+
+[node name="peg6" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(232, 186)
+
+[node name="peg7" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(273, 210)
+
+[node name="peg8" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(222, 229)
+
+[node name="peg9" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(135, 241)
+
+[node name="peg10" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(176, 290)
+
+[node name="peg11" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(104, 280)
+
+[node name="peg12" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(179, 396)
+
+[node name="peg13" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(118, 388)
+
+[node name="peg14" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(272, 354)
+
+[node name="peg15" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(232, 383)
+
+[node name="peg16" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(272, 416)
+
+[node name="peg17" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(337, 411)
+
+[node name="peg18" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(346, 458)
+
+[node name="peg19" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(201, 505)
+
+[node name="peg20" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(160, 491)
+
+[node name="peg21" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(115, 483)
+
+[node name="peg22" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(245, 524)
+
+[node name="peg23" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(286, 533)
+
+[node name="peg24" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(335, 536)
+
+[node name="peg25" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(381, 531)
+
+[node name="peg26" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(424, 531)
+
+[node name="peg27" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(468, 535)
+
+[node name="peg28" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(512, 534)
+
+[node name="peg29" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(560, 528)
+
+[node name="peg30" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(605, 515)
+
+[node name="peg31" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(649, 499)
+
+[node name="peg32" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(689, 484)
+
+[node name="peg33" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(701, 155)
+
+[node name="peg34" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(668, 137)
+
+[node name="peg35" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(632, 155)
+
+[node name="peg36" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(675, 188)
+
+[node name="peg37" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(622, 196)
+
+[node name="peg38" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(582, 184)
+
+[node name="peg39" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(538, 223)
+
+[node name="peg40" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(586, 246)
+
+[node name="peg41" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(658, 251)
+
+[node name="peg42" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(696, 261)
+
+[node name="peg43" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(627, 307)
+
+[node name="peg44" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(359, 250)
+
+[node name="peg45" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(442, 259)
+
+[node name="peg46" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(358, 304)
+
+[node name="peg47" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(409, 291)
+
+[node name="peg48" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(472, 303)
+
+[node name="peg49" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(466, 346)
+
+[node name="peg50" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(393, 343)
+
+[node name="peg51" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(321, 350)
+
+[node name="peg52" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(391, 415)
+
+[node name="peg53" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(436, 461)
+
+[node name="peg54" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(443, 410)
+
+[node name="peg55" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(496, 416)
+
+[node name="peg56" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(531, 366)
+
+[node name="peg57" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(553, 414)
+
+[node name="peg58" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(628, 395)
+
+[node name="peg59" parent="pegs" instance=ExtResource("5_n7ypv")]
+position = Vector2(675, 384)
+
+[node name="brick" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(126, 362)
+rotation = -0.117933
+
+[node name="brick2" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(157, 356)
+rotation = -0.219446
+
+[node name="brick3" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(187, 347)
+rotation = -0.328565
+
+[node name="brick4" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(216, 334)
+rotation = -0.454328
+
+[node name="brick5" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(243, 318)
+rotation = -0.604583
+
+[node name="brick6" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(268, 299)
+rotation = -0.715702
+
+[node name="brick7" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(291, 276)
+rotation = -0.868626
+
+[node name="brick8" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(309, 252)
+rotation = -0.935
+
+[node name="brick9" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(674, 358)
+rotation = 0.105427
+
+[node name="brick10" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(643, 353)
+rotation = 0.230285
+
+[node name="brick11" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(613, 343)
+rotation = 0.419908
+
+[node name="brick12" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(584, 329)
+rotation = 0.476802
+
+[node name="brick13" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(556, 314)
+rotation = 0.535444
+
+[node name="brick14" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(531, 295)
+rotation = 0.723952
+
+[node name="brick15" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(509, 273)
+rotation = 0.818798
+
+[node name="brick16" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(488, 248)
+rotation = 0.920156
+
+[node name="brick17" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(708, 421)
+rotation = -0.0912284
+
+[node name="brick18" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(678, 426)
+rotation = -0.283922
+
+[node name="brick19" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(648, 436)
+rotation = -0.379668
+
+[node name="brick20" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(618, 449)
+rotation = -0.451224
+
+[node name="brick21" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(589, 463)
+rotation = -0.433786
+
+[node name="brick22" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(560, 476)
+rotation = -0.370532
+
+[node name="brick23" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(531, 486)
+rotation = -0.188413
+
+[node name="brick24" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(499, 490)
+rotation = -0.0185433
+
+[node name="brick25" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(96, 422)
+rotation = 0.0813831
+
+[node name="brick26" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(126, 427)
+rotation = 0.254646
+
+[node name="brick27" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(156, 437)
+rotation = 0.335498
+
+[node name="brick28" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(185, 450)
+rotation = 0.473319
+
+[node name="brick29" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(213, 464)
+rotation = 0.449364
+
+[node name="brick30" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(242, 477)
+rotation = 0.366976
+
+[node name="brick31" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(272, 487)
+rotation = 0.283059
+
+[node name="brick32" parent="pegs" instance=ExtResource("6_0s5r2")]
+position = Vector2(304, 494)
+rotation = 0.143279

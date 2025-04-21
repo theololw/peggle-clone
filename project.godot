@@ -23,6 +23,7 @@ Global="*res://scripts/global.gd"
 
 window/size/viewport_width=800
 window/size/viewport_height=600
+window/stretch/mode="viewport"
 
 [global_group]
 
@@ -43,3 +44,8 @@ shoot={
 2d_physics/layer_2="ball"
 2d_physics/layer_3="pegs"
 2d_physics/layer_4="ghost_ball"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

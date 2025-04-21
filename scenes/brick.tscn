@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmy76niufgboj"]
+
+[ext_resource type="Script" uid="uid://brw2hc4vcllyb" path="res://scripts/brick.gd" id="1_0w5h4"]
+[ext_resource type="Texture2D" uid="uid://dp8uibesc0b65" path="res://assets/brick.png" id="1_5l4w1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0w5h4"]
+size = Vector2(32, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mekc"]
+size = Vector2(32, 20)
+
+[node name="brick" type="StaticBody2D" groups=["peg"]]
+collision_layer = 4
+collision_mask = 10
+script = ExtResource("1_0w5h4")
+
+[node name="Blue_Brick" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_5l4w1")
+vframes = 8
+
+[node name="Blue_Brick_Hit" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("1_5l4w1")
+vframes = 8
+frame = 4
+
+[node name="Orange_Brick" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("1_5l4w1")
+vframes = 8
+frame = 1
+
+[node name="Orange_Brick_Hit" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("1_5l4w1")
+vframes = 8
+frame = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_0w5h4")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_7mekc")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

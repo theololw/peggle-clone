@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1y7n2pl2d1pm"]
+[gd_scene load_steps=7 format=3 uid="uid://b1y7n2pl2d1pm"]
 
 [ext_resource type="Texture2D" uid="uid://oqutwdc04a6f" path="res://assets/ball.png" id="1_7s4qf"]
 [ext_resource type="Script" uid="uid://cnpysv0yynw2s" path="res://scripts/ball.gd" id="1_cxlvu"]
@@ -10,9 +10,13 @@ bounce = 0.9
 [sub_resource type="CircleShape2D" id="CircleShape2D_cxlvu"]
 radius = 6.0
 
+[sub_resource type="Curve" id="Curve_cxlvu"]
+_data = [Vector2(0.0170455, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
 [sub_resource type="Gradient" id="Gradient_cxlvu"]
 offsets = PackedFloat32Array(0, 0.52, 1)
-colors = PackedColorArray(0, 1, 1, 1, 0.686667, 1, 1, 0.313333, 1, 1, 1, 0)
+colors = PackedColorArray(0.431373, 1, 1, 1, 0.686667, 1, 1, 0.313333, 1, 1, 1, 0)
 
 [node name="ball" type="RigidBody2D" groups=["Ball"]]
 collision_layer = 2
@@ -39,13 +43,20 @@ shape = SubResource("CircleShape2D_cxlvu")
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 texture_filter = 1
 amount = 20
-texture = ExtResource("1_7s4qf")
+lifetime = 0.6
 gravity = Vector2(0, 0)
-scale_amount_min = 0.6
-scale_amount_max = 0.6
+scale_amount_min = 7.0
+scale_amount_max = 7.0
+scale_amount_curve = SubResource("Curve_cxlvu")
 color_ramp = SubResource("Gradient_cxlvu")
 
 [node name="ghost_ball_timeout" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Particle_timout" type="Timer" parent="."]
+wait_time = 0.7
 one_shot = true
 
 [connection signal="timeout" from="ghost_ball_timeout" to="." method="_on_ghost_ball_timeout_timeout"]
+[connection signal="timeout" from="Particle_timout" to="." method="_on_particle_timout_timeout"]
