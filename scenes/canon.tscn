@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://c640ell31g2om"]
+
+[ext_resource type="Script" uid="uid://bqkxhw1onwp6a" path="res://scripts/canon.gd" id="1_8rv5y"]
+[ext_resource type="Texture2D" uid="uid://cwbfhx2aa3m5w" path="res://assets/shooter.png" id="2_cbomg"]
+
+[node name="canon" type="Node2D"]
+script = ExtResource("1_8rv5y")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
+z_index = 1
+polygon = PackedVector2Array(0, -8, 80, -8, 80, 8, 0, 8)
+
+[node name="shooter" type="Node2D" parent="."]
+position = Vector2(0, 8)
+
+[node name="Shooter" type="Sprite2D" parent="shooter"]
+z_index = 1
+position = Vector2(16, 0)
+texture = ExtResource("2_cbomg")
+
+[node name="muzzle" type="Node2D" parent="shooter"]
+position = Vector2(88, 0)
+
+[node name="ghost_ball_cooldown" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="ghost_ball_cooldown" to="." method="_on_ghost_ball_cooldown_timeout"]

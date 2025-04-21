@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bhb2wao8s77pw"]
+
+[node name="aim_trail" type="Polygon2D"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
