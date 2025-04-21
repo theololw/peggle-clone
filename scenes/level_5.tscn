@@ -1,0 +1,336 @@
+[gd_scene load_steps=6 format=3 uid="uid://yytlgdwkycxw"]
+
+[ext_resource type="Texture2D" uid="uid://cljadv05bnb47" path="res://assets/PC Computer - Peggle Deluxe - Bjorn Unicorns Stages.png" id="1_e224s"]
+[ext_resource type="PackedScene" uid="uid://dusavmr4veh3b" path="res://scenes/level_frame.tscn" id="1_w2wna"]
+[ext_resource type="PackedScene" uid="uid://c640ell31g2om" path="res://scenes/canon.tscn" id="2_e224s"]
+[ext_resource type="Texture2D" uid="uid://dqok2wtq22jlo" path="res://assets/Skärmbild 2025-04-21 180825.png" id="2_tbt7t"]
+[ext_resource type="PackedScene" uid="uid://m3f07je2igwj" path="res://scenes/peg.tscn" id="5_cynta"]
+
+[node name="level_5" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(400, 324)
+scale = Vector2(1.00459, 1.00546)
+texture = ExtResource("1_e224s")
+hframes = 2
+vframes = 3
+frame = 4
+
+[node name="Skärmbild2025-04-21180825" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.486275)
+position = Vector2(404, 289)
+texture = ExtResource("2_tbt7t")
+
+[node name="level_frame" parent="." instance=ExtResource("1_w2wna")]
+
+[node name="canon" parent="." instance=ExtResource("2_e224s")]
+position = Vector2(400, 64)
+
+[node name="pegs" type="Node2D" parent="."]
+
+[node name="peg" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(186, 165)
+
+[node name="peg2" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(230, 156)
+
+[node name="peg3" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(142, 182)
+
+[node name="peg4" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(142, 228)
+
+[node name="peg5" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(179, 210)
+
+[node name="peg6" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(108, 257)
+
+[node name="peg7" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(149, 278)
+
+[node name="peg8" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(211, 237)
+
+[node name="peg9" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(242, 215)
+
+[node name="peg10" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(289, 220)
+
+[node name="peg11" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(267, 260)
+
+[node name="peg12" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(304, 284)
+
+[node name="peg13" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(253, 315)
+
+[node name="peg14" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(215, 284)
+
+[node name="peg15" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(179, 309)
+
+[node name="peg16" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(183, 350)
+
+[node name="peg17" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(117, 359)
+
+[node name="peg18" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(163, 384)
+
+[node name="peg19" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(125, 401)
+
+[node name="peg20" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(154, 428)
+
+[node name="peg21" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(187, 447)
+
+[node name="peg22" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(150, 476)
+
+[node name="peg23" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(191, 498)
+
+[node name="peg24" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(127, 507)
+
+[node name="peg25" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(161, 528)
+
+[node name="peg26" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(201, 538)
+
+[node name="peg27" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(232, 506)
+
+[node name="peg28" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(260, 525)
+
+[node name="peg29" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(294, 509)
+
+[node name="peg30" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(327, 534)
+
+[node name="peg31" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(364, 526)
+
+[node name="peg32" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(403, 521)
+
+[node name="peg33" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(453, 530)
+
+[node name="peg34" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(490, 515)
+
+[node name="peg35" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(525, 535)
+
+[node name="peg36" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(559, 523)
+
+[node name="peg37" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(607, 529)
+
+[node name="peg38" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(656, 528)
+
+[node name="peg39" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(667, 493)
+
+[node name="peg40" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(625, 497)
+
+[node name="peg41" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(635, 461)
+
+[node name="peg42" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(587, 490)
+
+[node name="peg43" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(596, 444)
+
+[node name="peg44" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(664, 446)
+
+[node name="peg45" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(653, 401)
+
+[node name="peg46" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(661, 360)
+
+[node name="peg47" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(623, 392)
+
+[node name="peg48" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(612, 350)
+
+[node name="peg49" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(641, 325)
+
+[node name="peg50" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(668, 299)
+
+[node name="peg51" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(635, 284)
+
+[node name="peg52" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(636, 245)
+
+[node name="peg53" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(665, 207)
+
+[node name="peg54" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(623, 191)
+
+[node name="peg55" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(591, 160)
+
+[node name="peg56" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(569, 191)
+
+[node name="peg57" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(569, 243)
+
+[node name="peg58" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(532, 219)
+
+[node name="peg59" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(490, 244)
+
+[node name="peg60" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(475, 282)
+
+[node name="peg61" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(515, 285)
+
+[node name="peg62" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(551, 302)
+
+[node name="peg63" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(598, 273)
+
+[node name="peg64" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(593, 311)
+
+[node name="peg65" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(526, 331)
+
+[node name="peg66" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(569, 356)
+
+[node name="peg67" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(540, 381)
+
+[node name="peg68" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(497, 354)
+
+[node name="peg69" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(452, 318)
+
+[node name="peg70" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(400, 320)
+
+[node name="peg71" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(351, 315)
+
+[node name="peg72" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(282, 343)
+
+[node name="peg73" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(226, 352)
+
+[node name="peg74" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(200, 399)
+
+[node name="peg75" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(236, 405)
+
+[node name="peg76" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(244, 443)
+
+[node name="peg77" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(223, 472)
+
+[node name="peg78" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(270, 480)
+
+[node name="peg79" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(320, 472)
+
+[node name="peg80" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(353, 496)
+
+[node name="peg81" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(397, 482)
+
+[node name="peg82" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(441, 490)
+
+[node name="peg83" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(484, 477)
+
+[node name="peg84" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(516, 456)
+
+[node name="peg85" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(555, 450)
+
+[node name="peg86" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(542, 495)
+
+[node name="peg87" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(582, 402)
+
+[node name="peg88" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(511, 406)
+
+[node name="peg89" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(477, 385)
+
+[node name="peg90" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(443, 370)
+
+[node name="peg91" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(392, 365)
+
+[node name="peg92" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(320, 359)
+
+[node name="peg93" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(263, 378)
+
+[node name="peg94" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(288, 409)
+
+[node name="peg95" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(351, 380)
+
+[node name="peg96" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(425, 405)
+
+[node name="peg97" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(383, 420)
+
+[node name="peg98" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(332, 422)
+
+[node name="peg99" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(289, 446)
+
+[node name="peg100" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(363, 458)
+
+[node name="peg101" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(427, 453)
+
+[node name="peg102" parent="pegs" instance=ExtResource("5_cynta")]
+position = Vector2(468, 434)

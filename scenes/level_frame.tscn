@@ -13,6 +13,15 @@ size = Vector2(1136, 98)
 [node name="level_frame" type="Node"]
 script = ExtResource("1_hgmru")
 
+[node name="points" type="Label" parent="."]
+z_index = 1
+offset_left = 176.0
+offset_top = 8.0
+offset_right = 304.0
+offset_bottom = 36.0
+text = "21380"
+vertical_alignment = 1
+
 [node name="Ui" type="Sprite2D" parent="."]
 position = Vector2(400, 248)
 texture = ExtResource("2_ahgut")

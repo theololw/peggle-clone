@@ -24,6 +24,8 @@ collision_mask = 5
 physics_material_override = SubResource("PhysicsMaterial_cxlvu")
 gravity_scale = 0.5
 linear_damp = 0.05
+angular_damp_mode = 1
+angular_damp = 100.0
 script = ExtResource("1_cxlvu")
 
 [node name="Ball" type="Sprite2D" parent="."]

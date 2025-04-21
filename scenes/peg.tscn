@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://m3f07je2igwj"]
+[gd_scene load_steps=11 format=3 uid="uid://m3f07je2igwj"]
 
 [ext_resource type="Script" uid="uid://banr0h5hqgy3d" path="res://scripts/peg.gd" id="1_j6u4k"]
 [ext_resource type="Texture2D" uid="uid://brkn8jftopvbe" path="res://assets/peg_blue.png" id="1_mhmpc"]
 [ext_resource type="Texture2D" uid="uid://dfwjerc3a0plj" path="res://assets/bluehitpeg.png" id="3_upqsn"]
 [ext_resource type="Texture2D" uid="uid://bc0fd13sjoain" path="res://assets/peg_orange.png" id="4_78d3w"]
 [ext_resource type="Texture2D" uid="uid://dnqe7o3l0e3l0" path="res://assets/peg_orange_hit.png" id="5_22ts5"]
+[ext_resource type="AudioStream" uid="uid://cinag5bgqpl18" path="res://assets/peghit_low.ogg" id="6_22ts5"]
+[ext_resource type="Texture2D" uid="uid://cy8fk4bcexle8" path="res://assets/purplePeg.png" id="6_aoiy4"]
+[ext_resource type="Texture2D" uid="uid://qjmrqwm5ao2x" path="res://assets/purple_hit.png" id="7_itihd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j6u4k"]
 
@@ -39,6 +42,16 @@ texture_filter = 1
 position = Vector2(-1, 1)
 texture = ExtResource("5_22ts5")
 
+[node name="PurplePeg" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("6_aoiy4")
+
+[node name="PurpleHit" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("7_itihd")
+
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 4
 collision_mask = 2
@@ -46,5 +59,8 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 visible = false
 shape = SubResource("CircleShape2D_upqsn")
+
+[node name="hit_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_22ts5")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

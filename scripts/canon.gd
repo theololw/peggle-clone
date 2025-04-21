@@ -36,7 +36,6 @@ func _process(delta: float) -> void:
 				Global.orange_assigned_left -= 1
 	
 	
-	
 	# shooter look at where the mouse is
 	$shooter.look_at(get_global_mouse_position())
 	
