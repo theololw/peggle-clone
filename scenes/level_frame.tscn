@@ -1,14 +1,58 @@
-[gd_scene load_steps=6 format=3 uid="uid://dusavmr4veh3b"]
+[gd_scene load_steps=13 format=3 uid="uid://dusavmr4veh3b"]
 
 [ext_resource type="Script" uid="uid://clpfdkfcgg5f2" path="res://scripts/level_frame.gd" id="1_hgmru"]
 [ext_resource type="Texture2D" uid="uid://oyfej8cooa1g" path="res://assets/ui.png" id="2_ahgut"]
 [ext_resource type="Texture2D" uid="uid://brwev0cxpnblw" path="res://assets/winScreen.png" id="3_ahgut"]
+[ext_resource type="AudioStream" uid="uid://bxf3v3j4w8gxc" path="res://assets/extraball.ogg" id="4_lh6n1"]
+[ext_resource type="AudioStream" uid="uid://bq6n36r12k3vi" path="res://assets/coin_spin.ogg" id="5_wi78x"]
+[ext_resource type="Texture2D" uid="uid://di27fndlm65t7" path="res://assets/bucket.png" id="6_iknub"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rka8t"]
 size = Vector2(82, 1536)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hph3"]
 size = Vector2(1136, 98)
+
+[sub_resource type="Animation" id="Animation_d64vx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(144, 600)]
+}
+
+[sub_resource type="Animation" id="Animation_iknub"]
+resource_name = "bucket_movin"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.03333, 6.03333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(144, 600), Vector2(664, 600), Vector2(144, 600)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y06dt"]
+_data = {
+&"RESET": SubResource("Animation_d64vx"),
+&"bucket_movin": SubResource("Animation_iknub")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d64vx"]
+size = Vector2(108, 18)
 
 [node name="level_frame" type="Node"]
 script = ExtResource("1_hgmru")
@@ -21,6 +65,36 @@ offset_right = 304.0
 offset_bottom = 36.0
 text = "21380"
 vertical_alignment = 1
+
+[node name="balls" type="Label" parent="."]
+z_index = 2
+offset_top = 88.0
+offset_right = 80.0
+offset_bottom = 160.0
+theme_override_colors/font_color = Color(0, 0.831373, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 33
+text = "12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="reset_button" type="Button" parent="."]
+z_index = 2
+offset_left = 732.0
+offset_top = 536.0
+offset_right = 788.0
+offset_bottom = 592.0
+text = "RESET
+BALL"
+
+[node name="level_select" type="Button" parent="."]
+z_index = 1
+offset_left = 8.0
+offset_top = 536.0
+offset_right = 71.0
+offset_bottom = 592.0
+text = "LEVEL
+SELECT"
 
 [node name="Ui" type="Sprite2D" parent="."]
 position = Vector2(400, 248)
@@ -66,5 +140,58 @@ offset_right = 176.0
 offset_bottom = 212.0
 text = "NEXT LEVEL"
 
+[node name="style_meter" type="ProgressBar" parent="."]
+modulate = Color(1, 0.905882, 0.501961, 1)
+offset_left = 736.0
+offset_top = 172.0
+offset_right = 784.0
+offset_bottom = 520.0
+fill_mode = 3
+show_percentage = false
+
+[node name="free_ball" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_lh6n1")
+
+[node name="coin_spin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_wi78x")
+
+[node name="bucket_anim" type="AnimationPlayer" parent="."]
+root_node = NodePath("../bucket")
+libraries = {
+&"": SubResource("AnimationLibrary_y06dt")
+}
+autoplay = "bucket_movin"
+
+[node name="bucket" type="Node2D" parent="."]
+position = Vector2(144, 600)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="bucket"]
+position = Vector2(-416, -600)
+collision_mask = 10
+
+[node name="Bucket" type="Sprite2D" parent="bucket/StaticBody2D"]
+texture_filter = 1
+position = Vector2(416, 584)
+texture = ExtResource("6_iknub")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bucket/StaticBody2D"]
+polygon = PackedVector2Array(304, 592, 352, 576, 360, 576, 360, 620, 328, 620)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="bucket/StaticBody2D"]
+position = Vector2(824, 0)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(296, 592, 348, 576, 356, 576, 356, 620, 324, 620)
+
+[node name="bucket_area" type="Area2D" parent="bucket"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bucket/bucket_area"]
+position = Vector2(-2, 11)
+shape = SubResource("RectangleShape2D_d64vx")
+debug_color = Color(2.575e-06, 0.646838, 0.227039, 0.42)
+
+[connection signal="pressed" from="reset_button" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="level_select" to="." method="_on_level_select_pressed"]
 [connection signal="body_entered" from="death_pit" to="." method="_on_death_pit_body_entered"]
 [connection signal="pressed" from="WinScreen/Button" to="." method="_on_button_pressed"]
+[connection signal="body_entered" from="bucket/bucket_area" to="." method="_on_bucket_area_body_entered"]

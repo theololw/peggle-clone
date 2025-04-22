@@ -40,6 +40,7 @@ func _process(delta: float) -> void:
 	$shooter.look_at(get_global_mouse_position())
 	
 	if Input.is_action_just_pressed("shoot") and Global.shot_ready:
+		Global.balls -= 1
 		var direction = (get_global_mouse_position() - position).normalized()
 	
 		var ball_instance = ball.instantiate()

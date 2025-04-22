@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxsgpng4jobxy"]
+
+[ext_resource type="Texture2D" uid="uid://51dnhi3cah00" path="res://assets/PC Computer - Peggle Deluxe - Stage Previews.png" id="1_3shnc"]
+[ext_resource type="Script" uid="uid://v2asd1r6kfrf" path="res://scripts/level_select.gd" id="1_p0wlc"]
+[ext_resource type="Texture2D" uid="uid://th7lejkiecan" path="res://assets/Skärmbild 2025-04-22 155501.png" id="2_2epne"]
+
+[node name="level_select" type="Node2D"]
+script = ExtResource("1_p0wlc")
+
+[node name="Skärmbild2025-04-22155501" type="Sprite2D" parent="."]
+position = Vector2(400, 300)
+texture = ExtResource("2_2epne")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 36.0
+offset_top = 76.0
+offset_right = 242.0
+offset_bottom = 274.0
+flat = true
+
+[node name="PcComputer-PeggleDeluxe-StagePreviews" type="Sprite2D" parent="Button"]
+position = Vector2(103, 98)
+texture = ExtResource("1_3shnc")
+hframes = 5
+vframes = 21
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 296.0
+offset_top = 72.0
+offset_right = 502.0
+offset_bottom = 270.0
+flat = true
+
+[node name="PcComputer-PeggleDeluxe-StagePreviews2" type="Sprite2D" parent="Button2"]
+position = Vector2(104, 98)
+texture = ExtResource("1_3shnc")
+hframes = 5
+vframes = 21
+frame = 1
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 564.0
+offset_top = 72.0
+offset_right = 770.0
+offset_bottom = 270.0
+flat = true
+
+[node name="PcComputer-PeggleDeluxe-StagePreviews3" type="Sprite2D" parent="Button3"]
+position = Vector2(103, 98)
+texture = ExtResource("1_3shnc")
+hframes = 5
+vframes = 21
+frame = 2
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 36.0
+offset_top = 324.0
+offset_right = 242.0
+offset_bottom = 522.0
+flat = true
+
+[node name="PcComputer-PeggleDeluxe-StagePreviews4" type="Sprite2D" parent="Button4"]
+position = Vector2(103, 98)
+texture = ExtResource("1_3shnc")
+hframes = 5
+vframes = 21
+frame = 3
+
+[node name="Button5" type="Button" parent="."]
+offset_left = 564.0
+offset_top = 326.0
+offset_right = 770.0
+offset_bottom = 524.0
+flat = true
+
+[node name="PcComputer-PeggleDeluxe-StagePreviews6" type="Sprite2D" parent="Button5"]
+position = Vector2(103, 98)
+texture = ExtResource("1_3shnc")
+hframes = 5
+vframes = 21
+frame = 4
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]

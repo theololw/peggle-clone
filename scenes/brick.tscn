@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmy76niufgboj"]
+[gd_scene load_steps=7 format=3 uid="uid://dmy76niufgboj"]
 
 [ext_resource type="Script" uid="uid://brw2hc4vcllyb" path="res://scripts/brick.gd" id="1_0w5h4"]
 [ext_resource type="Texture2D" uid="uid://dp8uibesc0b65" path="res://assets/brick.png" id="1_5l4w1"]
+[ext_resource type="AudioStream" uid="uid://cinag5bgqpl18" path="res://assets/peghit_low.ogg" id="3_7mekc"]
+[ext_resource type="AudioStream" uid="uid://c8cx4ueltg41u" path="res://assets/aah.ogg" id="4_c34n8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0w5h4"]
 size = Vector2(32, 20)
@@ -40,6 +42,20 @@ texture = ExtResource("1_5l4w1")
 vframes = 8
 frame = 5
 
+[node name="purple_brick" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("1_5l4w1")
+vframes = 8
+frame = 2
+
+[node name="purple_brick_hit" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("1_5l4w1")
+vframes = 8
+frame = 6
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("RectangleShape2D_0w5h4")
@@ -50,5 +66,11 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_7mekc")
+
+[node name="hit_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7mekc")
+
+[node name="aah" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_c34n8")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

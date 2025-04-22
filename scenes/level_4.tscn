@@ -69,33 +69,6 @@ position = Vector2(500, 228)
 [node name="peg13" parent="pegs" instance=ExtResource("5_qsmat")]
 position = Vector2(540, 228)
 
-[node name="peg14" parent="pegs" instance=ExtResource("5_qsmat")]
-position = Vector2(245, 229)
-
-[node name="peg15" parent="pegs" instance=ExtResource("5_qsmat")]
-position = Vector2(281, 228)
-
-[node name="peg16" parent="pegs" instance=ExtResource("5_qsmat")]
-position = Vector2(317, 229)
-
-[node name="peg17" parent="pegs" instance=ExtResource("5_qsmat")]
-position = Vector2(353, 228)
-
-[node name="peg18" parent="pegs" instance=ExtResource("5_qsmat")]
-position = Vector2(389, 228)
-
-[node name="peg19" parent="pegs" instance=ExtResource("5_qsmat")]
-position = Vector2(425, 228)
-
-[node name="peg20" parent="pegs" instance=ExtResource("5_qsmat")]
-position = Vector2(461, 228)
-
-[node name="peg21" parent="pegs" instance=ExtResource("5_qsmat")]
-position = Vector2(500, 228)
-
-[node name="peg22" parent="pegs" instance=ExtResource("5_qsmat")]
-position = Vector2(540, 228)
-
 [node name="peg23" parent="pegs" instance=ExtResource("5_qsmat")]
 position = Vector2(629, 159)
 
@@ -316,70 +289,6 @@ position = Vector2(353, 535)
 rotation = 0.295718
 
 [node name="brick16" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(378, 547)
-rotation = 1.5744
-
-[node name="brick17" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(100, 188)
-rotation = 0.124995
-
-[node name="brick18" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(133, 196)
-rotation = 0.345406
-
-[node name="brick19" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(163, 210)
-rotation = 0.573209
-
-[node name="brick20" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(190, 230)
-rotation = 0.724823
-
-[node name="brick21" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(212, 254)
-rotation = 0.971057
-
-[node name="brick22" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(229, 282)
-rotation = 1.18239
-
-[node name="brick23" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(239, 313)
-rotation = 1.40144
-
-[node name="brick24" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(243, 348)
-rotation = 1.56925
-
-[node name="brick25" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(243, 380)
-rotation = 1.56925
-
-[node name="brick26" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(246, 414)
-rotation = 1.3469
-
-[node name="brick27" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(256, 446)
-rotation = 1.18672
-
-[node name="brick28" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(272, 476)
-rotation = 0.969973
-
-[node name="brick29" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(294, 501)
-rotation = 0.698905
-
-[node name="brick30" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(321, 521)
-rotation = 0.543457
-
-[node name="brick31" parent="pegs" instance=ExtResource("6_yk4f3")]
-position = Vector2(353, 535)
-rotation = 0.295718
-
-[node name="brick32" parent="pegs" instance=ExtResource("6_yk4f3")]
 position = Vector2(378, 547)
 rotation = 1.5744
 
