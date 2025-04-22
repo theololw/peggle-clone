@@ -19,6 +19,7 @@ offset_bottom = 274.0
 flat = true
 
 [node name="PcComputer-PeggleDeluxe-StagePreviews" type="Sprite2D" parent="Button"]
+visible = false
 position = Vector2(103, 98)
 texture = ExtResource("1_3shnc")
 hframes = 5
@@ -32,6 +33,7 @@ offset_bottom = 270.0
 flat = true
 
 [node name="PcComputer-PeggleDeluxe-StagePreviews2" type="Sprite2D" parent="Button2"]
+visible = false
 position = Vector2(104, 98)
 texture = ExtResource("1_3shnc")
 hframes = 5
@@ -46,6 +48,7 @@ offset_bottom = 270.0
 flat = true
 
 [node name="PcComputer-PeggleDeluxe-StagePreviews3" type="Sprite2D" parent="Button3"]
+visible = false
 position = Vector2(103, 98)
 texture = ExtResource("1_3shnc")
 hframes = 5
@@ -60,6 +63,7 @@ offset_bottom = 522.0
 flat = true
 
 [node name="PcComputer-PeggleDeluxe-StagePreviews4" type="Sprite2D" parent="Button4"]
+visible = false
 position = Vector2(103, 98)
 texture = ExtResource("1_3shnc")
 hframes = 5
@@ -74,6 +78,7 @@ offset_bottom = 524.0
 flat = true
 
 [node name="PcComputer-PeggleDeluxe-StagePreviews6" type="Sprite2D" parent="Button5"]
+visible = false
 position = Vector2(103, 98)
 texture = ExtResource("1_3shnc")
 hframes = 5

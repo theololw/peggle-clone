@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dusavmr4veh3b"]
+[gd_scene load_steps=15 format=3 uid="uid://dusavmr4veh3b"]
 
 [ext_resource type="Script" uid="uid://clpfdkfcgg5f2" path="res://scripts/level_frame.gd" id="1_hgmru"]
 [ext_resource type="Texture2D" uid="uid://oyfej8cooa1g" path="res://assets/ui.png" id="2_ahgut"]
@@ -6,6 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://bxf3v3j4w8gxc" path="res://assets/extraball.ogg" id="4_lh6n1"]
 [ext_resource type="AudioStream" uid="uid://bq6n36r12k3vi" path="res://assets/coin_spin.ogg" id="5_wi78x"]
 [ext_resource type="Texture2D" uid="uid://di27fndlm65t7" path="res://assets/bucket.png" id="6_iknub"]
+[ext_resource type="AudioStream" uid="uid://cahqp4rjqq0mp" path="res://assets/Odetojoy.mp3" id="6_y06dt"]
+[ext_resource type="AudioStream" uid="uid://bs7fx35hoitl" path="res://assets/background_music.mp3" id="7_iijcy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rka8t"]
 size = Vector2(82, 1536)
@@ -154,6 +156,13 @@ stream = ExtResource("4_lh6n1")
 
 [node name="coin_spin" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_wi78x")
+
+[node name="ode_to_joy" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_y06dt")
+
+[node name="bg_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_iijcy")
+autoplay = true
 
 [node name="bucket_anim" type="AnimationPlayer" parent="."]
 root_node = NodePath("../bucket")

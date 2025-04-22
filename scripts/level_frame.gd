@@ -1,6 +1,10 @@
 extends Node
 
+var winning = false
+
 func _ready() -> void:
+	winning = false
+	$bg_music.play()
 	$WinScreen.hide()
 
 
@@ -36,6 +40,9 @@ func reset_round():
 	
 	# check win state and lose state
 	if Global.total_oranges == 0:
+		winning = true
+		$bg_music.stop()
+		$ode_to_joy.play()
 		$WinScreen.show()
 	if Global.balls < 1:
 		print("YOU LOST")
@@ -71,6 +78,9 @@ func _physics_process(delta: float) -> void:
 				peg.purple = true
 				peg.become_purple()
 				Global.purple_left -= 1
+	
+	if winning:
+		$ode_to_joy.volume_db += 0.02
 	
 	
 
