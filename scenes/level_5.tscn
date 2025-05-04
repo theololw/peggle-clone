@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cljadv05bnb47" path="res://assets/PC Computer - Peggle Deluxe - Bjorn Unicorns Stages.png" id="1_e224s"]
 [ext_resource type="PackedScene" uid="uid://dusavmr4veh3b" path="res://scenes/level_frame.tscn" id="1_w2wna"]
 [ext_resource type="PackedScene" uid="uid://c640ell31g2om" path="res://scenes/canon.tscn" id="2_e224s"]
-[ext_resource type="Texture2D" uid="uid://dqok2wtq22jlo" path="res://assets/Skärmbild 2025-04-21 180825.png" id="2_tbt7t"]
+[ext_resource type="Texture2D" uid="uid://dqok2wtq22jlo" path="res://assets/screenshots/Skärmbild 2025-04-21 180825.png" id="2_tbt7t"]
 [ext_resource type="PackedScene" uid="uid://m3f07je2igwj" path="res://scenes/peg.tscn" id="5_cynta"]
 
 [node name="level_5" type="Node2D"]

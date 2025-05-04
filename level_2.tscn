@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ch4xsde8ki6f5"]
 
-[ext_resource type="Texture2D" uid="uid://cpfnv6rx1xf7e" path="res://assets/level2.png" id="1_1y8me"]
+[ext_resource type="Texture2D" uid="uid://cpfnv6rx1xf7e" path="res://assets/screenshots/level2.png" id="1_1y8me"]
 [ext_resource type="PackedScene" uid="uid://dusavmr4veh3b" path="res://scenes/level_frame.tscn" id="1_nmjpi"]
 [ext_resource type="PackedScene" uid="uid://c640ell31g2om" path="res://scenes/canon.tscn" id="2_xdadj"]
 [ext_resource type="Texture2D" uid="uid://cljadv05bnb47" path="res://assets/PC Computer - Peggle Deluxe - Bjorn Unicorns Stages.png" id="4_n7ypv"]

@@ -8,4 +8,4 @@ var temp_points = 0
 var sound_points = 0
 var points = 0
 var purple_left = 2
-var balls = 12
+var balls = 10
