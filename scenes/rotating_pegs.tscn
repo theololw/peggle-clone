@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://crujj5bqolccw"]
+
+[ext_resource type="Script" uid="uid://b36i3ehcoele3" path="res://scripts/rotating_pegs.gd" id="1_qrtds"]
+
+[node name="rotating_pegs" type="Node2D"]
+script = ExtResource("1_qrtds")

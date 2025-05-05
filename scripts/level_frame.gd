@@ -116,6 +116,23 @@ func _on_button_pressed() -> void:
 	if current_scene_name == "level_9":
 		reset_global_vars()
 		get_tree().change_scene_to_file("res://scenes/level_10.tscn")
+	
+	
+	if current_scene_name == "level_10":
+		reset_global_vars()
+		get_tree().change_scene_to_file("res://scenes/level_11.tscn")
+	if current_scene_name == "level_11":
+		reset_global_vars()
+		get_tree().change_scene_to_file("res://scenes/level_12.tscn")
+	if current_scene_name == "level_12":
+		reset_global_vars()
+		get_tree().change_scene_to_file("res://scenes/level_13.tscn")
+	if current_scene_name == "level_13":
+		reset_global_vars()
+		get_tree().change_scene_to_file("res://scenes/level_14.tscn")
+	if current_scene_name == "level_14":
+		reset_global_vars()
+		get_tree().change_scene_to_file("res://scenes/level_15.tscn")
 
 func reset_global_vars():
 	Global.orange_assigned_left = 30

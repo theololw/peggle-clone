@@ -9,7 +9,7 @@
 [node name="level1" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
-position = Vector2(400, 324)
+position = Vector2(400, 320)
 scale = Vector2(1.00459, 1.00546)
 texture = ExtResource("1_3hls8")
 hframes = 2

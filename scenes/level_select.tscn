@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxsgpng4jobxy"]
+[gd_scene load_steps=6 format=3 uid="uid://bxsgpng4jobxy"]
 
 [ext_resource type="Texture2D" uid="uid://51dnhi3cah00" path="res://assets/PC Computer - Peggle Deluxe - Stage Previews.png" id="1_3shnc"]
 [ext_resource type="Script" uid="uid://v2asd1r6kfrf" path="res://scripts/level_select.gd" id="1_p0wlc"]
 [ext_resource type="Texture2D" uid="uid://th7lejkiecan" path="res://assets/screenshots/Skärmbild 2025-04-22 155501.png" id="2_2epne"]
 [ext_resource type="Texture2D" uid="uid://1bvncu6u4ifp" path="res://assets/screenshots/Skärmbild 2025-05-04 161944.png" id="2_rif6e"]
+[ext_resource type="Texture2D" uid="uid://giepugtd1mho" path="res://assets/screenshots/chapter3.png" id="4_chg43"]
 
 [node name="level_select" type="Node2D"]
 script = ExtResource("1_p0wlc")
@@ -17,6 +18,10 @@ texture = ExtResource("2_rif6e")
 [node name="Skärmbild2025-04-22155501" type="Sprite2D" parent="background"]
 position = Vector2(400, 300)
 texture = ExtResource("2_2epne")
+
+[node name="Chapter3" type="Sprite2D" parent="background"]
+position = Vector2(2000, 288)
+texture = ExtResource("4_chg43")
 
 [node name="level1" type="Button" parent="background"]
 offset_left = 36.0
@@ -166,6 +171,80 @@ hframes = 5
 vframes = 21
 frame = 4
 
+[node name="level12" type="Button" parent="background"]
+offset_left = 1640.0
+offset_top = 76.0
+offset_right = 1846.0
+offset_bottom = 274.0
+flat = true
+
+[node name="PcComputer-PeggleDeluxe-StagePreviews" type="Sprite2D" parent="background/level12"]
+visible = false
+position = Vector2(103, 98)
+texture = ExtResource("1_3shnc")
+hframes = 5
+vframes = 21
+
+[node name="level13" type="Button" parent="background"]
+offset_left = 1900.0
+offset_top = 72.0
+offset_right = 2106.0
+offset_bottom = 270.0
+flat = true
+
+[node name="PcComputer-PeggleDeluxe-StagePreviews2" type="Sprite2D" parent="background/level13"]
+visible = false
+position = Vector2(104, 98)
+texture = ExtResource("1_3shnc")
+hframes = 5
+vframes = 21
+frame = 1
+
+[node name="level14" type="Button" parent="background"]
+offset_left = 2168.0
+offset_top = 72.0
+offset_right = 2374.0
+offset_bottom = 270.0
+flat = true
+
+[node name="PcComputer-PeggleDeluxe-StagePreviews3" type="Sprite2D" parent="background/level14"]
+visible = false
+position = Vector2(103, 98)
+texture = ExtResource("1_3shnc")
+hframes = 5
+vframes = 21
+frame = 2
+
+[node name="level15" type="Button" parent="background"]
+offset_left = 1640.0
+offset_top = 324.0
+offset_right = 1846.0
+offset_bottom = 522.0
+flat = true
+
+[node name="PcComputer-PeggleDeluxe-StagePreviews4" type="Sprite2D" parent="background/level15"]
+visible = false
+position = Vector2(103, 98)
+texture = ExtResource("1_3shnc")
+hframes = 5
+vframes = 21
+frame = 3
+
+[node name="level16" type="Button" parent="background"]
+offset_left = 2168.0
+offset_top = 326.0
+offset_right = 2374.0
+offset_bottom = 524.0
+flat = true
+
+[node name="PcComputer-PeggleDeluxe-StagePreviews6" type="Sprite2D" parent="background/level16"]
+visible = false
+position = Vector2(103, 98)
+texture = ExtResource("1_3shnc")
+hframes = 5
+vframes = 21
+frame = 4
+
 [node name="right" type="Button" parent="."]
 offset_left = 404.0
 offset_top = 540.0
@@ -190,5 +269,10 @@ flat = true
 [connection signal="pressed" from="background/level8" to="." method="_on_level_8_pressed"]
 [connection signal="pressed" from="background/level9" to="." method="_on_level_9_pressed"]
 [connection signal="pressed" from="background/level10" to="." method="_on_level_10_pressed"]
+[connection signal="pressed" from="background/level12" to="." method="_on_level_12_pressed"]
+[connection signal="pressed" from="background/level13" to="." method="_on_level_13_pressed"]
+[connection signal="pressed" from="background/level14" to="." method="_on_level_14_pressed"]
+[connection signal="pressed" from="background/level15" to="." method="_on_level_15_pressed"]
+[connection signal="pressed" from="background/level16" to="." method="_on_level_16_pressed"]
 [connection signal="pressed" from="right" to="." method="_on_right_pressed"]
 [connection signal="pressed" from="left" to="." method="_on_left_pressed"]

@@ -43,7 +43,28 @@ func _on_level_9_pressed() -> void:
 func _on_level_10_pressed() -> void:
 	reset_global_vars()
 	get_tree().change_scene_to_file("res://scenes/level_10.tscn")
-	
+
+
+func _on_level_12_pressed() -> void:
+	reset_global_vars()
+	get_tree().change_scene_to_file("res://scenes/level_11.tscn")
+
+func _on_level_13_pressed() -> void:
+	reset_global_vars()
+	get_tree().change_scene_to_file("res://scenes/level_12.tscn")
+
+func _on_level_14_pressed() -> void:
+	reset_global_vars()
+	get_tree().change_scene_to_file("res://scenes/level_13.tscn")
+
+func _on_level_15_pressed() -> void:
+	reset_global_vars()
+	get_tree().change_scene_to_file("res://scenes/level_14.tscn")
+
+func _on_level_16_pressed() -> void:
+	reset_global_vars()
+	get_tree().change_scene_to_file("res://scenes/level_15.tscn")
+
 func reset_global_vars():
 	Global.orange_assigned_left = 30
 	Global.points = 0

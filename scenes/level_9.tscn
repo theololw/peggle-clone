@@ -10,7 +10,6 @@
 [node name="level_9" type="Node2D"]
 
 [node name="background_2" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(400, 324)
 scale = Vector2(1.00459, 1.00546)
 texture = ExtResource("1_541qs")
@@ -27,7 +26,6 @@ texture = ExtResource("2_desnu")
 [node name="level_frame" parent="." instance=ExtResource("3_2q8u2")]
 
 [node name="canon" parent="." instance=ExtResource("4_wicpl")]
-visible = false
 position = Vector2(400, 64)
 
 [node name="pegs" type="Node2D" parent="."]
